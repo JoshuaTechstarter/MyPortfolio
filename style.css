@@ -1,5 +1,5 @@
 body{
-background: #9ebad1;
+    background: #9ebad1;
 
 }
 
@@ -7,7 +7,7 @@ nav {
     background: #2f85b7;
     padding: 15px 0;
     position: center;
-    margin: auto; 
+    margin: 0 auto; 
     top: 0;
     left: 0;
     text-align: center;
@@ -32,7 +32,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     font-weight: bold;
-    color: #9ebad1;
+    color: #090c0e;
     padding: 10px 15px;
     transition: box-shadow 0.3s ease-in-out;
     transition: 0.3s;
@@ -60,19 +60,25 @@ nav ul li a:hover {
     right: 20px;
 }*/
 
-
-
-.content {
-float: left;
-margin: auto; 
-background-color: white;
-width: 100%;
-border-bottom-left-radius: 25px ;
-border-bottom-right-radius: 25px ;
-box-shadow: 5px 5px 5px grey;
-box-sizing: border-box;
+.main {
+    display:flex;
 }
 
+@media (max-width: 600px) {
+.main{
+    flex-direction: column;
+} 
+   
+}
+
+.content {
+    margin: 0 auto; 
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 5px 5px 5px grey;
+    box-sizing: border-box;
+}
 
 h2 {
     text-align: center;
@@ -81,24 +87,22 @@ h2 {
 
 
 .left {
-float: left;
-background-color: white;
-width: 25%;
-border-bottom-left-radius: 25px ;
-box-shadow: 5px 5px 5px grey;
-box-sizing: border-box;
-
+    background-color: white;
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .portrait{
-    background-image: url(images/toshka.jpg);
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
-    background-position: center center;
-    background-size: cover;
-    margin: 0 auto;
-     
+    object-fit: cover;
+    
 }
 
 li {
@@ -107,21 +111,47 @@ li {
 
 
 .center{
-    float: left;
     width: 50%;
     background: lightgrey;
-    box-sizing: border-box;
     padding: 15px;
-    box-shadow: 5px 5px 5px grey;
+    box-sizing: border-box;
 }
 
 
 
 .right{
-float: left;
-background-color: white;
-width: 25%;
-border-bottom-right-radius: 25px ;
-box-shadow: 5px 5px 5px grey;
-box-sizing: border-box;
+    background-color: white;
+    width: 25%;
+    box-sizing: border-box;
 }
+
+
+
+footer {
+    background-color: #2975a1;
+    margin: 0 auto;
+    border-bottom-right-radius: 25px ;
+    border-bottom-left-radius: 25px ;
+    padding-right: 20px;
+    box-shadow: 5px 5px 5px grey;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+}
+
+.footerNav  {
+    list-style: none;
+    display: inline;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer ul li {
+    display:inline;
+}
+
+footer a {
+    color: black;
+    font-style: none;
+}
+

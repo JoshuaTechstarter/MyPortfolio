@@ -1,0 +1,11 @@
+textarea {
+    resize: none;
+  }
+
+  input:focus {
+    border: 1px solid black; /* Optional: Weißer Rand für bessere Sichtbarkeit */
+}
+
+textarea:focus {
+    border: 1px solid red;
+}
